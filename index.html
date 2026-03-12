@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ray-Ban | Meta - The Ultimate Smart Glasses Experience</title>
+
+    <!-- Fonts: DM Sans for clean, premium tech look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP & Lenis for premium scroll and animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 1. Ambient Background (Meta AI gradient orbs) -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- 2. Preloader -->
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-brand">
+                <span class="brand-red">Ray-Ban</span> <span class="brand-divider">|</span> <span
+                    class="brand-meta">Meta</span>
+            </div>
+            <div class="loader-bar-wrap">
+                <div id="loader-bar"></div>
+            </div>
+            <div id="loader-percent">0%</div>
+            <div class="loader-subtext">Initializing Experience...</div>
+        </div>
+    </div>
+
+    <!-- 3. Navigation Bar -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="header-logo">
+                <span class="brand-red-text">Ray-Ban</span> <span class="brand-divider-text">|</span> <span
+                    class="brand-meta-text">Meta</span>
+            </a>
+            <nav class="header-nav">
+                <a href="#features">Features</a>
+                <a href="#ai">Meta AI</a>
+                <a href="#audio">Audio</a>
+                <a href="#camera">Camera</a>
+            </nav>
+            <a href="#" class="header-cta">
+                <span class="cta-text">Shop Now</span>
+                <div class="cta-glow"></div>
+            </a>
+        </div>
+    </header>
+
+    <!-- 4. Hero Section (Standalone Initial View) -->
+    <section class="hero-standalone">
+        <!-- Immersive Premium Media -->
+        <div class="hero-media-container">
+            <img src="images/hero1.jpeg" id="hero-media-1" class="hero-media-img" alt="Meta Glass View 1">
+            <img src="images/hero2.jpeg" id="hero-media-2" class="hero-media-img" alt="Meta Glass View 2">
+            <div class="hero-media-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-heading">
+                <!-- We will rely on JS to split these lines optionally, or just wrap them -->
+                <div class="heading-line">The <span class="accent-gradient">Smart</span></div>
+                <div class="heading-line">Has Evolved</div>
+            </h1>
+            <p class="hero-tagline">
+                Capture the moment, listen to your life, and converse with Meta AI—all without taking out your phone.
+                Legendary Ray-Ban style meets cutting-edge Meta technology.
+            </p>
+            <div class="hero-actions">
+                <a href="#explore" class="btn-primary">
+                    <span class="btn-text">Explore Features</span>
+                </a>
+                <a href="#" class="btn-secondary">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
+                    </svg>
+                    <span class="btn-text">Watch Film</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to Experience</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- 5. Canvas Video Sequence -->
+    <div class="canvas-wrap" id="canvas-wrap">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- 6. Dark Overlay for Contrast while Scrolling Text -->
+    <div id="dark-overlay"></div>
+
+    <!-- 7. Marquee Background Text -->
+    <div class="marquee-wrap" data-scroll-speed="-40">
+        <div class="marquee-text">Meta AI • Ray-Ban • Capture • Listen • Ask • </div>
+    </div>
+
+    <!-- 8. Scroll Container & Choreographed Sections -->
+    <div id="scroll-container">
+
+        <!-- Section 1: Intro -->
+        <section class="scroll-section align-left" data-enter="10" data-leave="20" data-animation="fade-up">
+            <div class="section-inner glass-panel">
+                <span class="section-label">01 // Iconic Design</span>
+                <h2 class="section-heading">Wayfarer, <br>Reinvented.</h2>
+                <p class="section-body">Classic Ray-Ban silhouettes infused with invisible technology. Lightweight,
+                    comfortable, and indistinguishable from regular glasses.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Meta AI -->
+        <section class="scroll-section align-right" data-enter="25" data-leave="35" data-animation="slide-left"
+            data-persist="false">
+            <div class="section-inner glass-panel">
+                <span class="section-label gradient-label">02 // Meta AI</span>
+                <h2 class="section-heading">"Hey Meta, <br>look and tell me..."</h2>
+                <p class="section-body">Multimodal AI built right into your frames. Ask questions about what you're
+                    looking at, translate signs in real-time, or get creative writing help.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Camera -->
+        <section class="scroll-section align-left" data-enter="40" data-leave="50" data-animation="fade-up">
+            <div class="section-inner glass-panel">
+                <span class="section-label">03 // Ultra-Wide Camera</span>
+                <h2 class="section-heading">Capture <br>your POV.</h2>
+                <p class="section-body">High-quality 12MP photos and 1080p video. Livestream directly to Instagram and
+                    Facebook to share your exact perspective with the world.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Audio -->
+        <section class="scroll-section align-right" data-enter="55" data-leave="65" data-animation="slide-right">
+            <div class="section-inner glass-panel">
+                <span class="section-label">04 // Open-Ear Audio</span>
+                <h2 class="section-heading">The soundtrack <br>of your life.</h2>
+                <p class="section-body">Custom-designed speakers deliver rich sound and deep bass, while directional
+                    audio naturally reduces leakage. Plus, pristine voice calls with a 5-mic array.</p>
+            </div>
+        </section>
+
+        <!-- Section 5: Stats / Hardware -->
+        <section class="scroll-section section-stats" data-enter="70" data-leave="85" data-animation="scale-up"
+            data-persist="true">
+            <div class="section-inner wide-panel">
+                <h2 class="section-heading text-center">Uncompromising Spec.</h2>
+                <div class="stats-grid mt-4">
+                    <div class="stat">
+                        <span class="stat-number" data-value="12">0</span><span class="stat-suffix">MP</span>
+                        <span class="stat-label">Ultra-Wide Lens</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-value="36">0</span><span class="stat-suffix">HR</span>
+                        <span class="stat-label">With Charging Case</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-value="5">0</span>
+                        <span class="stat-label">Mic Array</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-value="32">0</span><span class="stat-suffix">GB</span>
+                        <span class="stat-label">Flash Storage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Final CTA -->
+        <section class="scroll-section section-cta" id="final-cta" data-enter="90" data-leave="100"
+            data-animation="fade-up" data-persist="true">
+            <div class="cta-inner glass-panel-glow" style="margin-bottom: 120px;">
+                <h2 class="section-heading cta-heading">Ready to see the future?</h2>
+                <p class="section-body" style="margin-bottom: 0;">Step into a world where technology and style are
+                    indistinguishable.</p>
+            </div>
+
+            <div class="site-footer-actions">
+                <div class="cta-buttons-wrap">
+                    <a href="#" class="cta-button primary">Buy Now</a>
+                    <a href="#" class="cta-button secondary">View Styles</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
