@@ -1,6 +1,10 @@
 # Ray-Ban | Meta — The Ultimate Smart Glasses Experience
 
-<video src="C:\Users\nikhil\Videos\Screen Recordings\Screen Recording 2026-03-12 104402.mp4" width="400" controls></video>
+
+https://github.com/user-attachments/assets/8abbfd44-8e7b-42cd-82ee-2c6d472522a8
+
+
+
 
 ## 🌐 [Live Demo](https://super-beijinho-c7e9d9.netlify.app/)
 
