@@ -1,6 +1,6 @@
 # Ray-Ban | Meta — The Ultimate Smart Glasses Experience
 
-![Site Preview](file:///C:/Users/nikhil/.gemini/antigravity/brain/11601263-e2fc-4c24-a625-f2b35a3a33e9/recording.mp4)
+<video src="C:\Users\nikhil\Videos\Screen Recordings\Screen Recording 2026-03-12 104402.mp4" width="400" controls></video>
 
 ## 🌐 [Live Demo](https://super-beijinho-c7e9d9.netlify.app/)
 
